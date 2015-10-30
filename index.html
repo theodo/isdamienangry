@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container text-center">
+            <h1>Is Damien Angry?</h1>
+            <h2 id="isAngry"></h2>
+            <section id="quote"></section>
+            <section><img width="300" id="pic" /></section>
+        </div>
+        <script>
+            var damiens = [
+                {
+                    image: '/images/AnT2LuEioSdbxpTt04vcI6ekdhrrKUQQzFNA4eh3MJLW.jpg',
+                    isAngry: false,
+                    quote: "Hum she's hot"
+                },
+                {
+                    image: '/images/AoFKAM5RbGdnotW_ERUmKjI0SFQ_66dijvyPPk05Z7lv.jpg',
+                    isAngry: true,
+                    quote: "Smart coders mother fucker"
+                },
+                {
+                    image: '/images/Ap5ETJhCakFIusdo385r8egoYnDwicX8UEucvy4W_ix1.jpg',
+                    isAngry: false,
+                    quote: "Bwouahahahah"
+                },
+                {
+                    image: '/images/ApMP6K759IEYJQEOnAkmEh3xzsL1h9FTWpi1r9yb3NPY.jpg',
+                    isAngry: true,
+                    quote: "No way!"
+                },
+                {
+                    image: '/images/AqLYdwrJpMbsg35v9wUAXTH3T5PhFEvTwZHDXLlIYjcH.jpg',
+                    isAngry: false,
+                    quote: "I'm a ok, don't freak out."
+                },
+                {
+                    image: '/images/Au2SZ_40XaaYg8dem9m9mc1_JG-OmV5MW7aC0aC6UzVs.jpg',
+                    isAngry: true,
+                    quote: "What?!"
+                },
+                {
+                    image: '/images/AuH7snFIAGIezOeIlrbAnYJzxCFBYgPdW9xDEzLjGqck.jpg',
+                    isAngry: false,
+                    quote: "Hi, I used to be in a boys band."
+                },
+                {
+                    image: '/images/AutK-eWD6r6JsEdB-s8DQTSt5xvtSYwPzqRSFFzOqd__.jpg',
+                    isAngry: false,
+                    quote: ""
+                },
+            ];
+
+            function changeDamien() {
+                var damien = damiens[Math.floor(Math.random()*damiens.length)];
+                document.getElementById('pic').src = damien.image;
+                document.getElementById('isAngry').innerHTML = damien.isAngry ? "Yes!" : "No :-(";
+                document.getElementById('quote').innerHTML = damien.quote;
+            }
+            changeDamien();
+            window.setInterval(changeDamien, 3000);
+            </script>
+    </body>
+</html>
